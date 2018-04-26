@@ -1,6 +1,6 @@
 # restaurant
 
-In my Resume Projects I have used folowing thing:
+In my Restaurant Project I have used folowing thing:
 
 -> HTML5/CSS3
 
