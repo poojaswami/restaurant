@@ -1,0 +1,525 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JQuery-restaurent</title>
+		<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/font-awesome.css" rel="stylesheet"> 
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<style>
+			body{
+				text-align:justify;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			.navbar-brand::first-letter{
+				color:red;
+				font-size:50px;
+				font-family:Brush Script MT, Brush Script Std, cursive;
+			}
+			.navbar-brand{
+				font-size:30px;
+			}
+			.navbar-inverse{
+				background-color:black;
+				font-family:Brush Script MT, Brush Script Std, cursive;
+			}
+			.navbar-inverse .navbar-nav >li>a{
+				color:red;
+				padding-right:30px;
+			}
+			#top{
+				padding:10px;
+			}
+			.navbar-nav{
+				margin-left:450px;
+				font-size:20px;
+			}
+			#menulist{
+				width:100%;
+				height:50px;
+				color:black;
+				font-size:20px;
+				text-align:center;
+				background-color:white;
+				display:none;
+			}
+			.nav-pills>li>a{
+				padding-right:20px;
+				padding-left:20px;
+				font-family:Arial, Helvetica, sans-serif;
+				padding-top:10px;
+				color:red;
+			}
+
+			#div2{
+				height:270px;
+				width:295px;
+				margin:5px;
+				float:left;
+			}
+			#south,#chinese,#italian,#raj{
+				display:none;
+			}
+			#food{
+				display:none;
+			}
+			i{
+				margin-left:110px;
+			}
+			#div2>img{
+				height:230px;
+				width:295px;
+				border:1px solid white;
+				border-radius:5px 5px 0px 0px;
+			}
+			h2::first-letter{
+				color:red;
+			}
+			h2{	
+				font-size:50px;
+				font-weight:bold;
+				font-family:Brush Script MT, Brush Script Std, cursive;
+			}
+			#about{
+				/* The image used */
+				background-image: url("images/about.jpg");
+
+				/* Set a specific height */
+				min-height: 500px; 
+
+				/* Create the parallax scrolling effect */
+				background-attachment: fixed;
+				background-size: cover;
+				position:relative;
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$("#menu").click(function(){
+					$("#menulist,#food").slideToggle();
+				})
+				$("#ni").click(function(){
+					$("#north").slideDown();
+					$("#south").slideUp();
+					$("#chinese").slideUp();
+					$("#italian").slideUp();
+					$("#raj").slideUp();
+					$("nav").toggle();
+				})
+				$("#si").click(function(){
+					$("#south").slideDown();
+					$("#north").slideUp();
+					$("#chinese").slideUp();
+					$("#italian").slideUp();
+					$("#raj").slideUp();
+				})
+				$("#rj").click(function(){
+					$("#raj").slideDown();
+					$("#south").slideUp();
+					$("#north").slideUp();
+					$("#chinese").slideUp();
+					$("#italian").slideUp();
+				})
+				$("#ch").click(function(){
+					$("#chinese").slideDown();
+					$("#south").slideUp();
+					$("#north").slideUp();
+					$("#italian").slideUp();
+					$("#raj").slideUp();
+				})
+				$("#it").click(function(){
+					$("#italian").slideDown();
+					$("#south").slideUp();
+					$("#north").slideUp();
+					$("#chinese").slideUp();
+					$("#raj").slideUp();
+				})
+				
+			});
+		</script>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid" id="top">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">Eato.fit</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About Us</a></li>
+					<li><a href="#foodmenu" id="menu">Menu</a></li>
+					<li><a href="#contact">Contact Us</a></li>
+				</ul>
+			</div>
+		</nav>
+	<section id="home">
+	<div class="container-fluid" style="margin:0px;padding:0px;" id="c">
+		 <div id="myCarousel" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+			<li data-target="#myCarousel" data-slide-to="4"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox" style="max-height:500px;" >
+			<div class="item active">
+			  <img src="images/ni.jpg" width="100%" height="500px">
+			</div>
+
+			<div class="item">
+			  <img src="images/si.png"  width="100%" height="500px">
+			</div>
+
+			<div class="item">
+			  <img src="images/it.jpg"width="100%" height="500px">
+			</div>
+
+			<div class="item">
+			  <img src="images/rj.jpg" width="100%" height="500px">
+			</div>
+			<div class="item">
+			  <img src="images/ch.jpg" width="100%" height="500px">
+			</div>
+		  </div>
+
+		  <!-- Left and right controls -->
+		  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		  </a>
+		</div>
+	</div>
+	</section>
+		<section id="foodmenu">
+		<div class="container-fluid" id="menulist" style="margin-top:70px;">
+			<div class="row">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<ul class="nav nav-pills">
+						<li><a href="#ni" id="ni">North Indian</a></li>
+						<li><a href="#si" id="si">South Indian</a></li>
+						<li><a href="#rj" id="rj">Rajasthani</a></li>
+						<li><a href="#it" id="it">Italian</a></li>
+						<li><a href="#ch" id="ch">Chinese</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-3"></div>
+			</div>
+		</div>
+		<div class="container-fluid" id="food">
+			<h2 class="text-center" style="color:black;">Menu</h2>
+			<div class="row" id="north">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-10">
+					<div id="div2"><img src="images/chole-kulche.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Chole Kulche<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 50</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/dal-fry.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Dal Fry&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 80</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/sookhi-bhaji.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Sookhi Bhaji<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 40</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/daal.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Dal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 60</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/chole.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Chole &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 75</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/dahi-bade.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Dahi Bade&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 100</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/pani-puri.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Pani Puri&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 20</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/chaat.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Chaat &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 30</i></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-1"></div>
+			</div>
+			<div class="row" id="raj">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-10">
+					<div id="div2"><img src="images/churma.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Churma &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 80</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/gujiya.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Ghujiya &nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 150</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/dal-dhokli.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Dal Dhokli&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 100</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/mirchi-vada.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Mirchi Vada&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 15</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/khakhra.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Khakhra &nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 85</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/samosa.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Samosa &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 15</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/dhokla.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Dhokla &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 60</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/kachori.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Kachori &nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 20</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/daalbaati.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Dal Baati&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 130</i></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-1"></div>
+			</div>
+			<div class="row" id="south">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-10">
+					<div id="div2"><img src="images/idli.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Idli &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 25</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/dosa.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Dosa &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 45</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/lemon-rice.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Lemon Rice&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 50</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/vadapav.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Vada Pav&nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 20</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/bhelpuri.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Bhelpuri &nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 20</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/pav-bhaji.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Pav Bhaji&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 80</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/uttapam.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Uttapam &nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 30</i></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-1"></div>
+			</div>
+			<div class="row" id="chinese">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-10">
+					<div id="div2"><img src="images/mommo.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Mommos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 20</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/chowmin.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Chowmin &nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 45</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/chinese.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Chinese Chowmin<i style="margin-left:90px">
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 50</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/momos-paneer.jpeg">
+						<ul class="list-group">
+							<li class="list-group-item">Paneer Mommos<i style="margin-left:90px">
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 30</i></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-1"></div>
+			</div>
+			<div class="row" id="italian">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-10">
+					<div id="div2"><img src="images/pasta.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Pasta &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 60</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/pasta1.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Italian Pasta<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 70</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/pizza.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Pizza &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 200</i></li>
+						</ul>
+					</div>
+					<div id="div2"><img src="images/gigis-pizza.jpg">
+						<ul class="list-group">
+							<li class="list-group-item">Gigis Pizza<i>
+							<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="fa fa-inr"></span> 200</i></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-1"></div>
+			</div>
+		</div>
+		</section>
+		<section id="about" style="height:500px;">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-1"></div>
+					<div class="col-sm-10 text-center">
+						<h2 class="text-center" style="color:black;margin-top:60px;">About Us</h2>
+						<span style="font-family:Courgette, cursive;font-size:25px;">____Welcome to Eato.fit____</span>
+						<br><br><br><br>
+						<div class="row">
+							<div class="col-sm-3"></div>
+							<div class="col-sm-6">
+								<p style="font-family:Courgette, cursive;font-size:20px; color:black;">Eato.fit, as the name suggests, is a popular quick
+								service restaurant serving fresh and lip-smacking food. 
+								We serve a variety of dishes as well as an exhaustive
+								list of items from our menu at very affordable prices. 
+								Our popular dish being Dal Fry & Dahi Bade is a crowd favourite.
+								We also serve delicious Ghujiya and Churma,
+								which has been pleasing many customers since the time of 
+								inception. Our staff is very courteous as well as hard
+								working to please anyone who dines with us. Our outlet 
+								is located at Sarjapur road, you can also find us on
+								Google for directions.</p>
+							</div>
+							<div class="col-sm-3"></div>
+						</div>
+					</div>
+					<div class="col-sm-1"></div>
+				</div>
+			</div>
+		</section>
+		<footer id="contact" style="height:auto;background-color:black;">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-1"></div>
+					<div class="col-sm-10">
+						<h2 class="text-center" style="color:white;">Contact Us</h2>
+						<div class="row">
+							<div class="col-sm-4">
+								<label style="color:white;float:left;"><span class="fa fa-envelope fa-2x" style="color:red;">&nbsp;&nbsp;</span></label>
+								<p style="color:white;">eatofit@gmail.com</p>
+								<br>
+								<label style="color:white;float:left;"><span class="fa fa-address-card fa-2x" style="color:red;">&nbsp;&nbsp;</span></label>
+								<p style="color:white;">Eato Fit, HSR Layout<br>
+								1st Sector, Bangalore</p>
+								<br>
+								<label style="color:white;float:left;"><span class="fa fa-mobile fa-3x" style="color:red;">&nbsp;&nbsp;&nbsp;</span></label>
+								<p style="color:white;">9654073346</p>
+							</div>
+							<div class="col-sm-4"></div>
+							<div class="col-sm-4">
+								<h5 style="font-family:Arial, Helvetica, sans-serif;font-weight:bold;font-size:20px;color:white;">We are Social</h5>
+								<a href="#"><span class="fa fa-facebook fa-3x" style="color:red;">&nbsp;&nbsp;</span></a>
+								<a href="#"><span class="fa fa-twitter fa-3x" style="color:red;">&nbsp;&nbsp;</span></a>
+								<a href="#"><span class="fa fa-google-plus-official fa-3x" style="color:red;"></span></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-1"></div>
+				</div>
+			</div>
+		</footer>
+		<script>
+			$(document).ready(function(){ 
+			$('.nav li a').click(function(){ 
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+			&& location.hostname == this.hostname){ 
+			var $target = $(this.hash);
+			$target = $target.length && $target 
+			|| $('[name=' + this.hash.slice(1) +']'); 
+			if ($target.length){ 
+			var targetOffset = $target.offset().top;
+			$('html,body')
+			.animate({scrollTop: targetOffset}, 1000); 
+			return false;
+			} 
+			} }); 
+			});
+		</script>
+	</body>
+</html>
